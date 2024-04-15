@@ -33,6 +33,10 @@ inputs:
     description: "When set to 'true', will compute the next tag, but will not create a release."
     required: false
     default: "false"
+  dockerfile_name:
+    description: "Specify a Dockerfile to use. Defaults to 'Dockerfile'"
+    required: false
+    default: "Dockerfile"
 outputs:
   tag_name:
     description: 'Tag of released version'
@@ -42,7 +46,7 @@ outputs:
     description: 'Github Release Body in Text'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: ${{ params.dockerfile_name }}
 branding:
   icon: 'award'
   color: 'blue'
