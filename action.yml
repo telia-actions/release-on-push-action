@@ -46,7 +46,9 @@ outputs:
     description: 'Github Release Body in Text'
 runs:
   using: 'docker'
-  image: '${{ inputs.dockerfile_name }}'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.dockerfile_name }}'
 branding:
   icon: 'award'
   color: 'blue'
