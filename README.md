@@ -21,6 +21,7 @@ versioned commit files for these reasons:
 - Agnostic of language & ecosystem (i.e. does not rely on presence of package.json)
 - Tagging does not require write permissions to bump version
 - Tagging does not trigger infinite-loop webhooks from pushing version bump commits
+- 
 
 ## Example Workflow
 
